@@ -86,14 +86,6 @@ import {
 interface ConversationState {}
 type ApplicationTurnState = DefaultTurnState<ConversationState>;
 
-// Iterate over all available environment variables
-for (const key in process.env) {
-    if (Object.prototype.hasOwnProperty.call(process.env, key)) {
-      const value = process.env[key];
-      console.log(`${key}: ${value}`);
-    }
-  }
-
 if (!process.env.OPENAI_API_KEY) {
     throw new Error('Missing environment variables - please check that OpenAIKey is set.');
 }
